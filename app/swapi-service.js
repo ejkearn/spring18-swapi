@@ -5,6 +5,34 @@ function SwapiService() {
 
   //public
 
+this.getWorld = function getWorld(url, cb){
+  if (typeof cb != "function") {
+    return console.error("[getPeople] requires a callback", url, cb);
+  }
+  url = url || "https://swapi.co/api/people/";
+  
+  $.get(url).then(cb);
+
+}
+
+this.getWorld = function getShip(url, cb){
+  if (typeof cb != "function") {
+    return console.error("[getPeople] requires a callback", url, cb);
+  }
+  url = url || "https://swapi.co/api/people/";
+  
+  $.get(url).then(cb);
+
+}
+// this.getWorldName = function(url){
+// var name;
+// var test;
+// test = $.get(url)
+// name = test.name
+// debugger
+//   return name
+
+
   this.getPeople = function getPeople(url, cb) {
     if (typeof cb != "function") {
       return console.error("[getPeople] requires a callback", url, cb);
