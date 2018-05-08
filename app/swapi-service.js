@@ -1,6 +1,6 @@
-console.log(1);
+// console.log(1);
 function SwapiService() {
-  console.log("MEEEE!!!!", 7);
+  // console.log("MEEEE!!!!", 7);
   //private
 
   //public
@@ -10,7 +10,7 @@ this.getWorld = function getWorld(url, cb){
     return console.error("[getPeople] requires a callback", url, cb);
   }
   url = url || "https://swapi.co/api/people/";
-  
+   // @ts-ignore
   $.get(url).then(cb);
 
 }
@@ -20,7 +20,7 @@ this.getWorld = function getShip(url, cb){
     return console.error("[getPeople] requires a callback", url, cb);
   }
   url = url || "https://swapi.co/api/people/";
-  
+   // @ts-ignore
   $.get(url).then(cb);
 
 }
@@ -38,10 +38,10 @@ this.getWorld = function getShip(url, cb){
       return console.error("[getPeople] requires a callback", url, cb);
     }
     url = url || "https://swapi.co/api/people/";
-    console.log(1);
+    // console.log(1);
     // @ts-ignore
     $.get(url).then(cb);
-    console.log(2);
+    // console.log(2);
   };
 }
-console.log(2);
+// console.log(2);

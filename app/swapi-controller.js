@@ -1,8 +1,8 @@
-console.log(3);
+// console.log(3);
 function SwapiController() {
-  console.log(6);
+  // console.log(6);
   var swService = new SwapiService();
-  console.log(8);
+  // console.log(8);
   //private
 
   function drawPeople(people) {
@@ -11,16 +11,16 @@ function SwapiController() {
     people.forEach(person => {
       // var planetName = swService.getWorldName(person.homeworld);
       template += `<div>
-        <h5>Name: ${person.name}</h5>
-        <h5>height: ${person.height}</h5>
-        <h5>Mass: ${person.mass}</h5>
-        <h5>Hair Color: ${person.hair_color}</h5>
-        <h5>Skin Color: ${person.skin_color}</h5>
-        <h5>Eye Color: ${person.eye_color}</h5>
-        <h5>Birth Year: ${person.birth_year}</h5>
-        <h5>Gender: ${person.gender}</h5>
+        <h5>Name: ${person.name}</h5> `
+        // <h5>height: ${person.height}</h5>
+        // <h5>Mass: ${person.mass}</h5>
+        // <h5>Hair Color: ${person.hair_color}</h5>
+        // <h5>Skin Color: ${person.skin_color}</h5>
+        // <h5>Eye Color: ${person.eye_color}</h5>
+        // <h5>Birth Year: ${person.birth_year}</h5>
+        // <h5>Gender: ${person.gender}</h5>
 
-        `
+
 
       template += `<h5><button onclick="app.controllers.swapiController.getWorld('${person.homeworld}')">Get HomeWorld Info</button></h5>`
 
@@ -43,7 +43,7 @@ function SwapiController() {
     <h5>Terrain: ${res.terrain}</h5>
     <h5>Population: ${res.population}</h5>
     </div>`
-    document.getElementById("sw-people").innerHTML = template;
+    document.getElementById("sw-info").innerHTML = template;
   }
 
 
@@ -66,7 +66,7 @@ function SwapiController() {
     drawPeople(res.results);
   }
   function handleWorldResponse(res) {
-  debugger
+  
 var noUrl = {
   previous: "",
   next: "",
@@ -77,12 +77,13 @@ var noUrl = {
 
   //public
 this.getWorld =function (url){
-debugger
+
   swService.getWorld(url, handleWorldResponse);
 }
 
   this.getPeople = function (url) {
     swService.getPeople(url, handlePeopleResponse);
   };
+
 }
-console.log(4);
+

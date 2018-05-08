@@ -5,24 +5,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
   <title>SWAPI FUN</title>
 </head>
 
 <body>
-  <h1>TODO: STAR WARS STUFF HERE</h1>
-  <button onclick="app.controllers.swapiController.getPeople()">GET PEOPLE</button>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>STAR WARS STUFF HERE</h1>
+        <div class="row">
+          <div class="col">
+            <button onclick="app.controllers.swapiController.getPeople()">GET PEOPLE</button>
 
-  <div id="buttons">
+            <div id="buttons">
 
-  </div>
+            </div>
 
-  <div id="sw-people"></div>
+            <div id="sw-people"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="sw-info" class="col">
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col"><h1>DnD Stuff</h1></div>
+          <div class="col">
+            <div id="my-race"></div>
+            <div id="my-class"></div>
+          </div>
+        </div>
+        
+
+        <div class="row">
+          <div class="col">
+            <h1>Races</h1>
+            <div id='races-data'></div>
+          </div>
+          <div class="col">
+            <h1>Classes</h1>
+            <div id='classes-data'></div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="active-data" class="col">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <h1>Pokemon Stuff</h1>
+        <button onclick="app.controllers.pokeController.getPokemon('https://pokeapi.co/api/v2/pokemon/?limit=20')">GET Pokemon</button>
+        <div class="row">
+          <div class="col">
+        <div id="poke-buttons"></div>
+        <div id="pokemon"></div>
+      </div>
+      <div class="col">
+        <h2>Poke Team</h2>
+        <div id="poke-team"></div>
+        <div id="poke-details"></div>
+      </div>
+      <div class="col">
+        
+</div>
+
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- EXTERNAL LIBRARIES -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+  <!-- SERVICES -->
+  <script src="app/pokeService.js"></script>
   <script src="app/swapi-service.js"></script>
-  <script src="app/swapi-controller.js"></script>
-  <script src="app/app.js"></script>
+  <script src="app/dnd-service.js"></script>
 
+  <!-- CONTROLLERS -->
+  <script src="app/pokeController.js"></script>
+  <script src="app/swapi-controller.js"></script>
+  <script src="app/races-controller.js"></script>
+  <script src="app/classes-controller.js"></script>
+
+  <!-- INIT APP -->
+  <script src="app/app.js"></script>
 </body>
 
 </html>
